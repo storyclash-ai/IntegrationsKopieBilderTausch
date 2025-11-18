@@ -69,7 +69,7 @@ export default function ShopifyUseCaseSection() {
               animation: 'slideInLeft 0.8s ease-out both',
             }}
           >
-            <div className="bg-gradient-to-br from-gray-50 to-transparent p-8 lg:p-12" style={{ borderRadius: '20px' }}>
+            <div className="bg-white p-8 lg:p-12" style={{ borderRadius: '20px', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}>
               <DataPipelineIllustration />
             </div>
           </div>
