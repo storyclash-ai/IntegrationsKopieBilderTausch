@@ -1,86 +1,69 @@
 const FlowIllustration = () => (
-  <svg viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-    <g transform="translate(100, 50)">
-      <rect x="120" y="80" width="180" height="130" rx="8" fill="#E8F5F1" opacity="0.6">
-        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" />
-      </rect>
-      <rect x="100" y="60" width="180" height="130" rx="8" fill="#E8F5F1" opacity="0.5">
-        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" begin="0.5s" repeatCount="indefinite" />
-      </rect>
-      <rect x="80" y="40" width="180" height="130" rx="8" fill="#D6ECE5" opacity="0.7">
-        <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" begin="1s" repeatCount="indefinite" />
-      </rect>
+  <div className="relative w-full h-full flex items-center justify-center" style={{ minHeight: '400px' }}>
+    <img
+      src="/illustrations/sync-illustration.png"
+      alt="Data synchronization illustration showing two people with sync symbol"
+      className="w-full h-auto object-contain"
+      onError={(e) => {
+        const target = e.target as HTMLImageElement;
+        target.style.display = 'none';
+        const fallback = target.nextElementSibling;
+        if (fallback) (fallback as HTMLElement).style.display = 'block';
+      }}
+    />
+    <svg
+      viewBox="0 0 600 400"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-auto"
+      style={{ display: 'none' }}
+    >
+      <rect width="600" height="400" fill="url(#bgGradient)" rx="20"/>
+      <defs>
+        <linearGradient id="bgGradient" x1="0" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#1DB574"/>
+          <stop offset="1" stopColor="#17A066"/>
+        </linearGradient>
+      </defs>
 
-      <g transform="translate(180, 60)">
-        <circle cx="0" cy="0" r="35" fill="#F2A42E" opacity="0.3" />
-        <path d="M -15,-5 L -5,-5 L -5,-15 L 5,-15 L 5,-5 L 15,-5 L 15,5 L 5,5 L 5,15 L -5,15 L -5,5 L -15,5 Z" fill="#F2A42E">
-          <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="8s" repeatCount="indefinite" />
-        </path>
+      <g transform="translate(80, 180)">
+        <ellipse cx="40" cy="140" rx="35" ry="10" fill="#0E8A52" opacity="0.3"/>
+        <rect x="15" y="85" width="50" height="55" rx="25" fill="#6B4E71"/>
+        <circle cx="40" cy="45" r="25" fill="#D4A574"/>
+        <path d="M 25,45 Q 22,38 30,35 Q 38,38 42,42 L 40,48 Q 35,52 30,48 Z" fill="#4A3728"/>
+        <rect x="15" y="135" width="50" height="10" rx="5" fill="#8B6F47"/>
+        <path d="M 65,95 L 80,105 L 75,118 L 65,125 L 60,118 Z" fill="#D4A574"/>
+        <path d="M 15,125 L 0,135 L 5,148 L 15,155 L 20,148 Z" fill="#D4A574"/>
       </g>
 
-      <g transform="translate(240, 80)">
-        <circle cx="0" cy="0" r="45" fill="#C73865" opacity="0.3" />
-        <path d="M -18,-8 L -8,-8 L -8,-18 L 8,-18 L 8,-8 L 18,-8 L 18,8 L 8,8 L 8,18 L -8,18 L -8,8 L -18,8 Z" fill="#C73865">
-          <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="6s" repeatCount="indefinite" />
-        </path>
-        <circle cx="0" cy="0" r="12" fill="#FFF" />
-        <circle cx="0" cy="0" r="6" fill="#C73865" />
+      <g transform="translate(300, 150)">
+        <circle cx="0" cy="50" r="60" fill="white" opacity="0.95"/>
+        <g transform="translate(-25, 25)">
+          <path d="M 15,10 L 30,25 L 25,25 L 25,40 L 20,40 L 20,25 L 15,25 Z" fill="#1DB574">
+            <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="1.5s" repeatCount="indefinite"/>
+          </path>
+          <path d="M 35,60 L 20,45 L 25,45 L 25,30 L 30,30 L 30,45 L 35,45 Z" fill="#1DB574">
+            <animateTransform attributeName="transform" type="translate" values="0,0; 0,3; 0,0" dur="1.5s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        <circle cx="0" cy="50" r="55" stroke="#E8F5F1" strokeWidth="3" fill="none" opacity="0.5">
+          <animate attributeName="stroke-dasharray" values="0 350; 350 0" dur="3s" repeatCount="indefinite"/>
+        </circle>
       </g>
-    </g>
 
-    <rect x="120" y="380" width="560" height="280" rx="16" fill="url(#greenGradient)" />
-    <defs>
-      <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style={{ stopColor: '#19B776', stopOpacity: 1 }} />
-        <stop offset="100%" style={{ stopColor: '#15A068', stopOpacity: 1 }} />
-      </linearGradient>
-    </defs>
-
-    <g transform="translate(200, 450)">
-      <path d="M 0,0 L 35,35 L 20,35 L 20,80 L 180,80 L 180,50 L 280,100 L 180,150 L 180,120 L 0,120 Z" fill="#FFF" opacity="0.95">
-        <animate attributeName="opacity" values="0.85;0.95;0.85" dur="2s" repeatCount="indefinite" />
-      </path>
-      <path d="M 400,120 L 365,85 L 380,85 L 380,40 L 220,40 L 220,70 L 120,20 L 220,-30 L 220,0 L 400,0 Z" fill="#FFF" opacity="0.95">
-        <animate attributeName="opacity" values="0.85;0.95;0.85" dur="2s" begin="0.5s" repeatCount="indefinite" />
-      </path>
-    </g>
-
-    <g transform="translate(80, 500)">
-      <ellipse cx="20" cy="90" rx="25" ry="8" fill="#1E8C62" opacity="0.4" />
-
-      <rect x="5" y="50" width="30" height="40" rx="15" fill="#4A90A4" />
-
-      <circle cx="20" cy="25" r="15" fill="#F4C19C" />
-      <path d="M 12,25 Q 12,30 15,32 L 15,28 Q 15,25 20,25 Q 25,25 25,28 L 25,32 Q 28,30 28,25" fill="#2C2C2C" />
-
-      <rect x="8" y="45" width="24" height="3" rx="1.5" fill="#3A7A94" />
-
-      <path d="M 35,55 L 45,60 L 40,65 L 35,68 L 32,65 L 32,60 Z" fill="#F4C19C" />
-
-      <path d="M 5,68 L -5,75 L -2,82 L 3,85 L 8,82 L 8,75 Z" fill="#F4C19C" />
-
-      <rect x="5" y="88" width="30" height="7" rx="3" fill="#2C4A5C" />
-    </g>
-
-    <g transform="translate(620, 520)">
-      <ellipse cx="20" cy="70" rx="28" ry="8" fill="#1E8C62" opacity="0.4" />
-
-      <rect x="5" y="35" width="30" height="35" rx="15" fill="#D4567A" />
-
-      <circle cx="20" cy="18" r="13" fill="#8D5C4D" />
-      <path d="M 12,15 Q 8,10 15,8 Q 22,10 28,15 Q 28,20 20,25 Q 12,20 12,15" fill="#2C2C2C" />
-
-      <rect x="8" y="32" width="24" height="3" rx="1.5" fill="#B8456A" />
-
-      <path d="M 35,42 L 42,48 L 40,54 L 35,58 L 32,54 L 30,48 Z" fill="#8D5C4D">
-        <animateTransform attributeName="transform" type="rotate" from="0 20 50" to="-15 20 50" dur="1.5s" repeatCount="indefinite" />
-      </path>
-
-      <path d="M 5,58 L -2,64 L 0,70 L 5,73 L 8,70 L 10,64 Z" fill="#8D5C4D" />
-
-      <rect x="2" y="68" width="36" height="6" rx="3" fill="#CC8A3D" />
-    </g>
-  </svg>
+      <g transform="translate(420, 180)">
+        <ellipse cx="40" cy="140" rx="35" ry="10" fill="#0E8A52" opacity="0.3"/>
+        <rect x="15" y="85" width="50" height="55" rx="25" fill="#C85A7C"/>
+        <circle cx="40" cy="45" r="25" fill="#F4DCC4"/>
+        <path d="M 25,42 Q 22,36 28,33 Q 36,36 55,42 Q 52,48 45,52 Q 35,52 28,48 Z" fill="#8B5E3C"/>
+        <rect x="15" y="135" width="50" height="10" rx="5" fill="#A0522D"/>
+        <path d="M 65,95 L 80,105 L 75,118 L 65,125 L 60,118 Z" fill="#F4DCC4">
+          <animateTransform attributeName="transform" type="rotate" values="0 72 110; -10 72 110; 0 72 110" dur="2s" repeatCount="indefinite"/>
+        </path>
+        <path d="M 15,125 L 0,135 L 5,148 L 15,155 L 20,148 Z" fill="#F4DCC4"/>
+      </g>
+    </svg>
+  </div>
 );
 
 const steps = [
