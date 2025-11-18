@@ -1,5 +1,5 @@
 const DataFlowIllustration = () => (
-  <div className="relative w-full h-full flex items-center justify-start pl-8">
+  <div className="relative w-full h-full flex items-start justify-start pl-8" style={{ paddingTop: '10px' }}>
     <img
       src="/illustrations/Dashboard1.png"
       alt="Storyclash Dashboard showing revenue growth and performance metrics"
