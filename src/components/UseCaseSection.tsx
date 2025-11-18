@@ -4,7 +4,7 @@ const DataPipelineIllustration = () => (
       src="/illustrations/powerful-influencer-analytics.webp"
       alt="Influencer analytics dashboard showing engagement metrics and KPIs"
       className="w-full h-auto object-contain"
-      style={{ maxHeight: '500px' }}
+      style={{ maxHeight: '400px' }}
     />
   </div>
 );
