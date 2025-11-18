@@ -1,7 +1,7 @@
 const DataFlowIllustration = () => (
   <div className="relative w-full h-full flex items-center justify-start pl-12">
     <img
-      src="/illustrations/Dashboard.png"
+      src="/illustrations/Dashboard1.png"
       alt="Storyclash Dashboard showing revenue growth and performance metrics"
       className="w-full h-auto object-contain"
       style={{ maxHeight: '600px', transform: 'scale(1.2)' }}
