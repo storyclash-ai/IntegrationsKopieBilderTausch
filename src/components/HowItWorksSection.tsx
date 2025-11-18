@@ -1,10 +1,10 @@
 const FlowIllustration = () => (
-  <div className="relative w-full h-full flex items-center justify-center" style={{ minHeight: '250px', maxHeight: '350px' }}>
+  <div className="relative w-full h-full flex items-center justify-center overflow-visible" style={{ minHeight: '350px' }}>
     <img
       src="/illustrations/sync-illustration.png"
       alt="Data synchronization illustration showing two people with sync symbol"
-      className="w-full h-auto object-cover"
-      style={{ maxHeight: '350px', objectPosition: 'center', opacity: '0.85' }}
+      className="w-full h-auto object-contain"
+      style={{ opacity: '0.85' }}
       onError={(e) => {
         const target = e.target as HTMLImageElement;
         target.style.display = 'none';
