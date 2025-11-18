@@ -1,7 +1,7 @@
 const DataPipelineIllustration = () => (
   <div className="relative w-full h-full flex items-center justify-center">
     <img
-      src="/illustrations/powerful-influencer-analytics.webp"
+      src="/illustrations/powerful-influencer-analytics.png"
       alt="Influencer analytics dashboard showing engagement metrics and KPIs"
       className="w-full h-auto object-contain"
       style={{ maxHeight: '400px' }}
