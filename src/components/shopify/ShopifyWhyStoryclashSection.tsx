@@ -42,8 +42,7 @@ const benefits = [
   {
     icon: EnterpriseIcon,
     title: 'Attribute Sales to Individual Influencers and Campaigns',
-    description: 'Get trustworthy, GDPR-compliant metrics for every creator, campaign, and conversion. Storyclash provides consistent KPIs designed for analytics teams and global marketing operations.',
-    image: '/illustrations/sync-illustration.png'
+    description: 'Get trustworthy, GDPR-compliant metrics for every creator, campaign, and conversion. Storyclash provides consistent KPIs designed for analytics teams and global marketing operations.'
   },
   {
     icon: ROIIcon,
