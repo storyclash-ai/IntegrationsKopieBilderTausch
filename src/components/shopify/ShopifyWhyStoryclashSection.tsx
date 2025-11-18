@@ -42,7 +42,8 @@ const benefits = [
   {
     icon: EnterpriseIcon,
     title: 'Attribute Sales to Individual Influencers and Campaigns',
-    description: 'Get trustworthy, GDPR-compliant metrics for every creator, campaign, and conversion. Storyclash provides consistent KPIs designed for analytics teams and global marketing operations.'
+    description: 'Get trustworthy, GDPR-compliant metrics for every creator, campaign, and conversion. Storyclash provides consistent KPIs designed for analytics teams and global marketing operations.',
+    image: '/illustrations/sync-illustration.png'
   },
   {
     icon: ROIIcon,
@@ -61,7 +62,7 @@ export default function ShopifyWhyStoryclashSection() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <div className="bg-gradient-to-br from-green-50/50 to-transparent p-8 lg:p-12" style={{ borderRadius: '20px' }}>
+            <div className="relative p-8 lg:p-12">
               <DataFlowIllustration />
             </div>
           </div>
@@ -77,9 +78,15 @@ export default function ShopifyWhyStoryclashSection() {
                     animation: `fadeInUp 0.6s ease-out ${index * 0.15}s both`,
                   }}
                 >
-                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110" style={{ color: '#19B776' }}>
-                    <Icon />
-                  </div>
+                  {benefit.image ? (
+                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                      <img src={benefit.image} alt="" className="w-12 h-12 object-contain" />
+                    </div>
+                  ) : (
+                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 group-hover:scale-110" style={{ color: '#19B776' }}>
+                      <Icon />
+                    </div>
+                  )}
 
                   <div>
                     <h3 className="mb-2" style={{ fontSize: '20px', lineHeight: '1.1', fontWeight: '600', color: '#333333', fontFamily: 'Roboto, sans-serif' }}>
