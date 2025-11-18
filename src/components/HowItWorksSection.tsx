@@ -4,7 +4,7 @@ const FlowIllustration = () => (
       src="/illustrations/sync-illustration.png"
       alt="Data synchronization illustration showing two people with sync symbol"
       className="w-full h-auto object-cover"
-      style={{ maxHeight: '350px', objectPosition: 'center' }}
+      style={{ maxHeight: '350px', objectPosition: 'center', opacity: '0.6' }}
       onError={(e) => {
         const target = e.target as HTMLImageElement;
         target.style.display = 'none';
