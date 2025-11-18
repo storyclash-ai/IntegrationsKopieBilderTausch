@@ -61,14 +61,7 @@ export default function WhyStoryclashSection() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <div
-              className="relative p-8 lg:p-12"
-              style={{
-                borderRadius: '24px',
-                background: 'linear-gradient(135deg, #f0fdf9 0%, #e6f7f2 50%, #d1f0e5 100%)',
-                boxShadow: '0 10px 40px rgba(25, 183, 118, 0.1)'
-              }}
-            >
+            <div className="relative p-8 lg:p-12">
               <DataFlowIllustration />
             </div>
           </div>
