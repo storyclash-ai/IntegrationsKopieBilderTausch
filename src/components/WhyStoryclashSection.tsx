@@ -1,29 +1,12 @@
 const DataFlowIllustration = () => (
-  <svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-    <rect x="40" y="40" width="120" height="80" rx="8" stroke="#19B776" strokeWidth="2" fill="rgba(25, 183, 118, 0.05)" />
-    <text x="100" y="85" fontSize="14" fontWeight="600" fill="#233C42" textAnchor="middle">Storyclash</text>
-
-    <rect x="240" y="40" width="120" height="80" rx="8" stroke="#19B776" strokeWidth="2" fill="rgba(25, 183, 118, 0.05)" />
-    <text x="300" y="85" fontSize="14" fontWeight="600" fill="#233C42" textAnchor="middle">Power BI</text>
-
-    <path d="M165 80 L235 80" stroke="#19B776" strokeWidth="2" strokeDasharray="4 4">
-      <animate attributeName="stroke-dashoffset" from="0" to="8" dur="0.5s" repeatCount="indefinite" />
-    </path>
-
-    <circle cx="100" cy="180" r="30" stroke="#19B776" strokeWidth="2" fill="rgba(25, 183, 118, 0.08)" />
-    <text x="100" y="185" fontSize="12" fontWeight="500" fill="#19B776" textAnchor="middle">Data</text>
-
-    <circle cx="200" cy="240" r="30" stroke="#19B776" strokeWidth="2" fill="rgba(25, 183, 118, 0.08)" />
-    <text x="200" y="245" fontSize="12" fontWeight="500" fill="#19B776" textAnchor="middle">KPIs</text>
-
-    <circle cx="300" cy="180" r="30" stroke="#19B776" strokeWidth="2" fill="rgba(25, 183, 118, 0.08)" />
-    <text x="300" y="185" fontSize="12" fontWeight="500" fill="#19B776" textAnchor="middle">ROI</text>
-
-    <path d="M100 150 L100 130" stroke="#E5EAEC" strokeWidth="2" />
-    <path d="M180 220 L130 190" stroke="#E5EAEC" strokeWidth="2" />
-    <path d="M220 220 L270 190" stroke="#E5EAEC" strokeWidth="2" />
-    <path d="M300 150 L300 130" stroke="#E5EAEC" strokeWidth="2" />
-  </svg>
+  <div className="relative w-full h-full flex items-center justify-center">
+    <img
+      src="/illustrations/Dashboard.png"
+      alt="Storyclash Dashboard showing revenue growth and performance metrics"
+      className="w-full h-auto object-contain"
+      style={{ maxHeight: '500px' }}
+    />
+  </div>
 );
 
 const SimplifyIcon = () => (
@@ -78,7 +61,14 @@ export default function WhyStoryclashSection() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <div className="bg-gradient-to-br from-green-50/50 to-transparent p-8 lg:p-12" style={{ borderRadius: '20px' }}>
+            <div
+              className="relative p-8 lg:p-12"
+              style={{
+                borderRadius: '24px',
+                background: 'linear-gradient(135deg, #f0fdf9 0%, #e6f7f2 50%, #d1f0e5 100%)',
+                boxShadow: '0 10px 40px rgba(25, 183, 118, 0.1)'
+              }}
+            >
               <DataFlowIllustration />
             </div>
           </div>
