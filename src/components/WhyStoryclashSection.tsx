@@ -4,7 +4,7 @@ const DataFlowIllustration = () => (
       src="/illustrations/Dashboard1.png"
       alt="Storyclash Dashboard showing revenue growth and performance metrics"
       className="w-full h-auto object-contain"
-      style={{ maxHeight: '500px', transform: 'scale(1.0)' }}
+      style={{ maxHeight: '500px', transform: 'scale(1.0)', opacity: '0.9' }}
     />
   </div>
 );
