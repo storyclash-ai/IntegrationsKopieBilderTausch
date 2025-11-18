@@ -1,10 +1,10 @@
 const DataFlowIllustration = () => (
-  <div className="relative w-full h-full flex items-center justify-center">
+  <div className="relative w-full h-full flex items-center justify-start pl-8">
     <img
       src="/illustrations/Dashboard.png"
       alt="Storyclash Dashboard showing revenue growth and performance metrics"
       className="w-full h-auto object-contain"
-      style={{ maxHeight: '500px' }}
+      style={{ maxHeight: '600px', transform: 'scale(1.15)' }}
     />
   </div>
 );
